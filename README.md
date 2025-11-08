@@ -1,2 +1,2 @@
-# Frontend-Mentor-Project-06-Testimonials-Grid
+# Frontend-Mentor-Project-07-Testimonials-Grid
 My attempt at Frontend Mentor Responsive Design Path - Project 3
