@@ -63,6 +63,7 @@ img, picture, video, canvas, svg {
 
 body {
     height: 100vh;
+    background-color: #F6F5F6;
 }
 
 .main {
@@ -71,8 +72,7 @@ body {
     flex-direction: column;
     justify-content: center;
 
-    background-color: #F6F5F6;
-    padding: 4.5625rem 2.1875rem; /* placeholder */
+    padding: clamp(4.5625rem, -5.241rem + 21.726vw, 14.313rem) clamp(2.1875rem, -3.607rem + 15.327vw, 10.188rem);
 }
 
 .grid-container {
@@ -91,6 +91,9 @@ body {
     flex-direction: column;
     gap: var(--spacing-3);
     font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
     box-shadow: 40px 60px 50px -47px #48556A3D;
 }
 .card.purple { 
@@ -129,7 +132,7 @@ body {
 }
 .quotation-pattern {
     position: absolute;
-    left: 69.62962%;
+    right: 3.75rem;
     top: 0;
 }
 .card-profile {
@@ -185,8 +188,26 @@ body {
     white-space: nowrap; 
     width: 1px;
 }
+
+footer { 
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.6875rem;
+    padding: 0.5rem 0;
+    background: transparent;
+    pointer-events: none;
+}
+    
+footer a { 
+    pointer-events: auto;
+    color: hsl(228, 45%, 44%); 
+}
+
+
 @media screen and (min-width: 48rem) {
-    .main { padding: 5.1875rem 3.5rem}
     .quotation-pattern {
         z-index: 2;
         background-image: url("../assets/images/bg-pattern-quotation.svg");
@@ -220,7 +241,6 @@ body {
 
 /* desktop format */
 @media screen and (min-width: 70rem) {
-    .main { padding: 14.3125rem 10rem}
     .grid-container {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -244,5 +264,8 @@ body {
     .card:nth-child(5) {
         grid-column: 4 / 5;
         grid-row: 1 / 3;
+    }
+    .footer {
+        position: absolute;
     }
 }
